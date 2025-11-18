@@ -30,11 +30,11 @@
             tapping-term-ms = <175>;
         };
 
-        close_curly_brackets: close_curly_brackets {
+        pipe_pound: pipe_pound {
             compatible = "zmk,behavior-tap-dance";
-            label = "CLOSE_CURLY_BRACKETS";
+            label = "PIPE_POUND";
             #binding-cells = <0>;
-            bindings = <&kp DE_RIGHT_BRACE>, <&kp DE_RIGHT_BRACKET>;
+            bindings = <&kp DE_PIPE>, <&kp DE_POUND>;
 
             tapping-term-ms = <175>;
         };
@@ -63,11 +63,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp DE_LT       &hold_alternative DE_QMARK EXCL  &kp DE_GRAVE               &open_curly_brackets  &kp DE_LEFT_PARENTHESIS  &hold_alternative DE_SINGLE_QUOTE DE_DOUBLE_QUOTES  &tog 4                                                           &mo 1      &hold_alternative DE_PERCENT DE_AMPERSAND  &kp DE_RIGHT_PARENTHESIS         &close_curly_brackets  &kp DE_TILDE                     &kp N0            &kp MINUS
-&kp ESC         &kp Q                            &kp W                      &kp E                 &kp R                    &kp T                                               &none                                                            &none      &kp Y                                      &hold_alternative DE_U_UMLAUT U  &kp I                  &hold_alternative DE_O_UMLAUT O  &kp P             &kp DE_U_UMLAUT
-&kp TAB         &hold_alternative DE_A_UMLAUT A  &hold_alternative DE_SZ S  &kp D                 &kp F                    &kp G                                               &none      &kp LCTRL     &kp LALT      &kp LGUI   &kp RCTRL      &none      &kp H                                      &kp J                            &kp K                  &kp L                            &kp DE_SEMICOLON  &hold_alternative DE_BSLH DE_FSLH
-&kp LEFT_SHIFT  &kp Z                            &kp X                      &kp C                 &kp V                    &kp B                                                                        &kp HOME      &kp PG_UP                            &kp N                                      &kp M                            &kp COMMA              &kp DOT                          &kp DE_MINUS      &kp CAPSLOCK
-&mo 3           &kp GRAVE                        &kp DE_AT                  &kp LEFT              &kp RIGHT                                                                    &kp SPACE  &kp LEFT_ALT  &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER                                             &kp UP                           &kp DOWN               &kp RBKT                         &kp BSLH          &mo 3
+&kp DE_LT       &hold_alternative DE_QMARK EXCL  &hold_alternative DE_SINGLE_QUOTE DE_DOUBLE_QUOTES  &open_curly_brackets  &kp DE_LEFT_PARENTHESIS  &pipe_pound  &tog 4                                                           &mo 1      &hold_alternative DE_PERCENT DE_AMPERSAND  &kp DE_RIGHT_PARENTHESIS         &pipe_pound  &kp DE_EQUAL                     &kp N0            &kp MINUS
+&kp TAB         &kp Q                            &kp W                                               &kp E                 &kp R                    &kp T        &none                                                            &none      &kp Y                                      &hold_alternative DE_U_UMLAUT U  &kp I        &hold_alternative DE_O_UMLAUT O  &kp P             &kp DE_TILDE
+&kp ESC         &hold_alternative DE_A_UMLAUT A  &hold_alternative DE_SZ S                           &kp D                 &kp F                    &kp G        &none      &kp LCTRL     &kp LALT      &kp LGUI   &kp RCTRL      &none      &kp H                                      &kp J                            &kp K        &kp L                            &kp DE_SEMICOLON  &hold_alternative DE_BSLH DE_FSLH
+&kp LEFT_SHIFT  &kp Z                            &kp X                                               &kp C                 &kp V                    &kp B                                 &kp HOME      &kp PG_UP                            &kp N                                      &kp M                            &kp COMMA    &kp DOT                          &kp DE_MINUS      &kp CAPSLOCK
+&mo 3           &kp GRAVE                        &kp DE_AT                                           &kp LEFT              &kp RIGHT                             &kp SPACE  &kp LEFT_ALT  &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER                                             &kp UP                           &kp DOWN     &kp RBKT                         &kp BSLH          &mo 3
             >;
         };
 
