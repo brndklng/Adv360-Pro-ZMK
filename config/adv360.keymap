@@ -62,7 +62,8 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_1to1>,
+                <&macro_press>,
+                <&kp KP_NUMLOCK &macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER &macro_param_2to1>,
                 <&macro_press>,
@@ -72,7 +73,9 @@
                 <&macro_release>,
                 <&kp MACRO_PLACEHOLDER &macro_param_1to1>,
                 <&macro_release>,
-                <&mo MACRO_PLACEHOLDER>;
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp KP_NUM>;
 
             label = "LAYER_SHIFT";
             wait-ms = <0>;
@@ -108,11 +111,11 @@
         writing {
             display-name = "normal layout";
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans                                          &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                          &trans  &trans        &trans        &trans        &trans        &trans           &kp DE_U_UMLAUT
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans      &trans  &trans        &trans        &trans        &trans        &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans      &trans                      &trans        &trans        &trans        &trans        &trans           &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &trans  &kp DELETE  &trans                &trans        &trans        &trans        &trans           &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans                                      &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                                      &trans  &trans        &trans        &trans        &trans        &trans           &kp DE_U_UMLAUT
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans  &trans        &trans        &trans        &trans        &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+&trans  &trans        &trans        &trans        &trans        &trans                        &trans      &trans                  &trans        &trans        &trans        &trans        &trans           &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &trans  &trans  &trans                &trans        &trans        &trans        &trans           &trans
             >;
         };
 
