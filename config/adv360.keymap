@@ -97,11 +97,11 @@
         special_layer {
             display-name = "special";
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans                                          &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                          &trans  &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &kp A         &kp S         &trans        &kp F         &trans        &trans  &trans  &trans      &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans      &trans                      &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &trans  &kp DELETE  &trans                &trans        &trans        &trans        &trans        &trans
+&trans  &kp KP_NUMBER_1  &kp KP_N2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans                                          &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans  &trans           &trans     &trans           &trans           &trans           &trans                                          &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &kp A            &kp S      &trans           &kp F            &trans           &trans  &trans  &trans      &trans  &trans      &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans           &trans     &trans           &trans           &trans                           &trans      &trans                      &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans           &trans     &trans           &trans                            &trans  &trans  &trans      &trans  &kp DELETE  &trans                   &trans           &trans           &trans           &trans           &trans
             >;
         };
 
