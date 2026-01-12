@@ -36,8 +36,15 @@
         choose_mac: choose_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 7>;
+            bindings = <&bt BT_SEL 2 &tog 2>;
             label = "CHOOSE_MAC";
+        };
+
+        choose_pc: choose_pc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &tog 0>;
+            label = "CHOOSE_PC";
         };
     };
 
@@ -47,22 +54,33 @@
         default {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &hold_alternative DE_QMARK EXCL  &hold_alternative DE_SINGLE_QUOTE DE_DOUBLE_QUOTES  &hold_alternative DE_LEFT_BRACE DE_LEFT_PARENTHESIS  &hold_alternative DE_LESS_THAN DE_LEFT_BRACKET  &hold_alternative PERCENT AMPERSAND  &tog 6                                                           &mo 5      &hold_alternative DE_BACKSLASH DE_FSLH  &hold_alternative DE_GREATER_THAN DE_RIGHT_BRACKET  &hold_alternative DE_RIGHT_BRACE DE_RIGHT_PARENTHESIS  &hold_alternative DE_PIPE DE_EQUAL  &kp DE_DOLLAR     &hold_alternative DE_ACUTE DE_GRAVE
+&kp GRAVE  &hold_alternative DE_QMARK EXCL  &hold_alternative DE_SINGLE_QUOTE DE_DOUBLE_QUOTES  &hold_alternative DE_LEFT_BRACE DE_LEFT_PARENTHESIS  &hold_alternative DE_LESS_THAN DE_LEFT_BRACKET  &hold_alternative PERCENT AMPERSAND  &tog 7                                                           &mo 6      &hold_alternative DE_BACKSLASH DE_FSLH  &hold_alternative DE_GREATER_THAN DE_RIGHT_BRACKET  &hold_alternative DE_RIGHT_BRACE DE_RIGHT_PARENTHESIS  &hold_alternative DE_PIPE DE_EQUAL  &kp DE_DOLLAR     &hold_alternative DE_ACUTE DE_GRAVE
 &kp TAB    &kp Q                            &kp W                                               &kp E                                                &kp R                                           &kp T                                &trans                                                           &trans     &kp Y                                   &kp U                                               &kp I                                                  &kp O                               &kp P             &hold_alternative DE_TILDE RIGHT_BRACKET
-&kp ESC    &hm DE_N0 A                      &hm DE_ESZETT S                                     &kp D                                                &hm DE_DOLLAR F                                 &kp G                                &trans     &kp LEFT_ALT  &tog 2        &kp LGUI   &kp RIGHT_ALT  &trans     &kp H                                   &kp J                                               &kp K                                                  &kp L                               &kp DE_SEMICOLON  &kp BSLH
+&kp ESC    &hm DE_N0 A                      &hm DE_ESZETT S                                     &kp D                                                &hm DE_DOLLAR F                                 &kp G                                &trans     &kp LEFT_ALT  &tog 3        &kp LGUI   &kp RIGHT_ALT  &trans     &kp H                                   &kp J                                               &kp K                                                  &kp L                               &kp DE_SEMICOLON  &kp BSLH
 &mo 1      &kp Z                            &kp X                                               &kp C                                                &kp V                                           &kp B                                                         &kp HOME      &kp PG_UP                            &kp N                                   &kp M                                               &kp COMMA                                              &kp DOT                             &kp DE_MINUS      &kp RIGHT_SHIFT
-&mo 4      &kp LEFT_SHIFT                   &none                                               &kp LEFT                                             &kp RIGHT                                                                            &kp SPACE  &kp LCTRL     &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER                                          &kp DOWN                                            &kp UP                                                 &none                               &none             &mo 4
+&mo 5      &kp LEFT_SHIFT                   &none                                               &kp LEFT                                             &kp RIGHT                                                                            &kp SPACE  &kp LCTRL     &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER                                          &kp DOWN                                            &kp UP                                                 &none                               &none             &mo 5
             >;
         };
 
         shifted_letters {
             display-name = "shifted";
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &tog 6                                          &mo 5   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0      &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &tog 7                                          &mo 6   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0      &trans
 &trans  &kp LS(Q)     &kp LS(W)     &kp LS(E)     &kp LS(R)     &kp LS(T)     &trans                                          &trans  &kp LS(Y)     &kp LS(U)     &kp LS(I)      &kp LS(O)     &kp LS(P)         &hold_alternative TILDE LS(RIGHT_BRACKET)
 &trans  &kp LS(A)     &kp LS(S)     &kp LS(D)     &kp LS(F)     &kp LS(G)     &trans  &trans  &trans      &trans  &trans      &trans  &kp LS(H)     &kp LS(J)     &kp LS(K)      &kp LS(L)     &trans            &kp LS(BSLH)
 &trans  &kp LS(Z)     &kp LS(X)     &kp LS(C)     &kp LS(V)     &kp LS(B)                     &trans      &trans                      &kp LS(N)     &kp LS(M)     &kp LS(COMMA)  &kp LS(DOT)   &kp LS(DE_MINUS)  &trans
 &trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &trans  &kp DELETE  &trans                &trans        &trans         &trans        &trans            &trans
+            >;
+        };
+
+        dumb_mac {
+            display-name = "base layer for mac";
+            bindings = <
+&kp DE_LT  &trans  &trans  &trans  &hold_alternative GRAVE DE_LEFT_BRACKET  &hold_alternative PERCENT LS(NUMBER_6)  &trans                                                           &trans     &trans  &hold_alternative LS(GRAVE) DE_RIGHT_BRACKET  &trans  &hold_alternative RA(GRAVE) DE_EQUAL  &trans  &trans
+&trans     &trans  &trans  &trans  &trans                                   &trans                                  &trans                                                           &trans     &trans  &trans                                        &trans  &trans                                &trans  &trans
+&trans     &trans  &trans  &trans  &trans                                   &trans                                  &trans     &kp LEFT_ALT  &tog 3        &kp LGUI   &kp RIGHT_ALT  &trans     &trans  &trans                                        &trans  &trans                                &trans  &trans
+&trans     &trans  &trans  &trans  &trans                                   &trans                                                           &kp HOME      &kp PG_UP                            &trans  &trans                                        &trans  &trans                                &trans  &trans
+&trans     &trans  &trans  &trans  &trans                                                                           &kp SPACE  &kp LCTRL     &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER          &trans                                        &trans  &trans                                &trans  &trans
             >;
         };
 
@@ -102,33 +120,22 @@
         mod {
             display-name = "Mod";
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &choose_mac  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none        &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
-&studio_unlock  &none         &none         &none         &none        &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &macro_ver   &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none                      &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none           &choose_pc  &bt BT_SEL 1  &choose_mac  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
+&none           &none       &none         &none        &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
+&studio_unlock  &none       &none         &none        &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
+&none           &none       &none         &none        &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
+&none           &none       &none         &none        &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                    &mo 6      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                    &mo 7      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                     &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp LBKT
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                         &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
 &mo 0      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp SPACE  &kp BSPC   &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp BSLH         &mo 0
-            >;
-        };
-
-        dumb_mac {
-            display-name = "base layer for mac";
-            bindings = <
-&kp LESS_THAN  &hold_alternative DE_QMARK EXCL  &hold_alternative DE_SINGLE_QUOTE DE_DOUBLE_QUOTES  &hold_alternative DE_LEFT_BRACE DE_LEFT_PARENTHESIS  &hold_alternative GRAVE DE_LEFT_BRACKET  &hold_alternative PERCENT LS(NUMBER_6)  &tog 6                                                           &mo 5      &hold_alternative DE_BACKSLASH DE_FSLH  &hold_alternative LS(GRAVE) DE_RIGHT_BRACKET  &hold_alternative DE_RIGHT_BRACE DE_RIGHT_PARENTHESIS  &hold_alternative RA(GRAVE) DE_EQUAL  &kp DE_DOLLAR     &hold_alternative DE_ACUTE DE_GRAVE
-&kp TAB        &kp Q                            &kp W                                               &kp E                                                &kp R                                    &kp T                                   &trans                                                           &trans     &kp Y                                   &kp U                                         &kp I                                                  &kp O                                 &kp P             &hold_alternative DE_TILDE RIGHT_BRACKET
-&kp ESC        &hm DE_N0 A                      &hm DE_ESZETT S                                     &kp D                                                &hm DE_DOLLAR F                          &kp G                                   &trans     &kp LEFT_ALT  &tog 2        &kp LGUI   &kp RIGHT_ALT  &trans     &kp H                                   &kp J                                         &kp K                                                  &kp L                                 &kp DE_SEMICOLON  &kp BSLH
-&mo 1          &kp Z                            &kp X                                               &kp C                                                &kp V                                    &kp B                                                            &kp HOME      &kp PG_UP                            &kp N                                   &kp M                                         &kp COMMA                                              &kp DOT                               &kp DE_MINUS      &kp RIGHT_SHIFT
-&mo 4          &kp LEFT_SHIFT                   &none                                               &kp LEFT                                             &kp RIGHT                                                                        &kp SPACE  &kp LCTRL     &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER                                          &kp DOWN                                      &kp UP                                                 &none                                 &none             &mo 4
             >;
         };
     };
@@ -137,8 +144,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_writing {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
     };
 };
