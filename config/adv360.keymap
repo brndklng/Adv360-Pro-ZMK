@@ -36,10 +36,10 @@
             label = "OPEN_BRACKET_DANCE";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LS(LEFT_BRACKET)>,
-                <&kp LEFT_BRACKET>,
-                <&kp LESS_THAN>;
+                <&kp LS(NUMBER_8)>,
+                <&kp RA(NUMBER_7)>,
+                <&kp RA(NUMBER_8)>,
+                <&kp DE_LESS_THAN>;
         };
     };
 
@@ -63,7 +63,7 @@
         compatible = "zmk,combos";
 
         toggle_coding_symbols {
-            bindings = <&to 1>;
+            bindings = <&mo 1>;
             key-positions = <32 31>;
         };
     };
