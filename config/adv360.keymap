@@ -36,7 +36,7 @@
         choose_mac: choose_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 1>;
+            bindings = <&bt BT_SEL 2 &tog 2>;
             label = "CHOOSE_MAC";
         };
 
@@ -51,9 +51,14 @@
     combos {
         compatible = "zmk,combos";
 
-        toggle_coding_symbols {
-            bindings = <&mo 1>;
+        toggle_coding_symbols_right {
+            bindings = <&mo 2>;
             key-positions = <32 31>;
+        };
+
+        toggle_coding_symbols_left {
+            bindings = <&mo 1>;
+            key-positions = <41 42>;
         };
     };
 
@@ -71,7 +76,18 @@
             >;
         };
 
-        coding_symbols {
+        coding_symbols_left {
+            display-name = "shifted";
+            bindings = <
+&trans     &trans            &trans            &trans            &trans            &trans            &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans            &trans            &trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans            &trans            &trans            &trans            &trans                            &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans            &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        coding_symbols_right {
             display-name = "base layer for mac";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
@@ -79,17 +95,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans                                         &trans                                         &trans                                         &trans                                          &trans
-            >;
-        };
-
-        additional_signs {
-            display-name = "shifted";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
