@@ -30,6 +30,17 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        open_bracket_dance: open_bracket_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OPEN_BRACKET_DANCE";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LS(LEFT_BRACKET)>,
+                <&kp LEFT_BRACKET>,
+                <&kp LESS_THAN>;
+        };
     };
 
     macros {
@@ -51,9 +62,9 @@
     combos {
         compatible = "zmk,combos";
 
-        testcombo {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <29 30>;
+        toggle_coding_symbols {
+            bindings = <&to 1>;
+            key-positions = <32 31>;
         };
     };
 
@@ -71,14 +82,14 @@
             >;
         };
 
-        layer2 {
+        coding_symbols {
             display-name = "base layer for mac";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &open_bracket_dance  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans               &trans  &trans  &trans  &trans
             >;
         };
 
@@ -127,12 +138,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        adjust_writing {
-            if-layers = <3 3>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
