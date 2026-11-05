@@ -30,17 +30,6 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
-
-        open_bracket_dance: open_bracket_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "OPEN_BRACKET_DANCE";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(NUMBER_8)>,
-                <&kp RA(NUMBER_7)>,
-                <&kp RA(NUMBER_8)>,
-                <&kp DE_LESS_THAN>;
-        };
     };
 
     macros {
@@ -85,11 +74,11 @@
         coding_symbols {
             display-name = "base layer for mac";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &open_bracket_dance  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &hold_alternative (LS(NUMBER_9)) LS(NUMBER_8)  &hold_alternative (RA(NUMBER_0)) RA(NUMBER_7)  &hold_alternative (RA(NUMBER_9)) RA(NUMBER_8)  &hold_alternative DE_GREATER_THAN DE_LESS_THAN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans                                         &trans                                         &trans                                         &trans                                          &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans                                         &trans                                         &trans                                         &trans                                          &trans
             >;
         };
 
