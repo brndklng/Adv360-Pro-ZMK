@@ -70,6 +70,11 @@
             bindings = <&mo 4>;
             key-positions = <47 48>;
         };
+
+        toggle_win_mgmt {
+            bindings = <&mo 5>;
+            key-positions = <50 49>;
+        };
     };
 
     keymap {
