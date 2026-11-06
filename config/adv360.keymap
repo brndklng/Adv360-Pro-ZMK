@@ -103,7 +103,7 @@
             label = "default";
         };
 
-        coding_symbols_left {
+        pc_coding_symbols_left {
             display-name = "shifted";
             bindings = <
 &none                              &none                                &none                                             &none             &none             &none             &none                                  &trans  &none  &none  &none  &none  &none  &none
@@ -112,6 +112,8 @@
 &none                              &none                                &none                                             &none             &none             &none                           &none      &none                 &none  &none  &none  &none  &none  &none
 &none                              &none                                &none                                             &none             &none                               &none  &none  &none      &none  &none  &none          &none  &none  &none  &none  &none
             >;
+
+            label = "pc_coding_symbols_left";
         };
 
         coding_symbols_right {
