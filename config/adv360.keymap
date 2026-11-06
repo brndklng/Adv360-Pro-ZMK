@@ -163,6 +163,8 @@
 &none  &none  &none  &none  &none  &none                &none      &none                 &none     &none     &none   &none      &none  &none
 &none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none             &none     &none   &none      &none  &none
             >;
+
+            label = "arrow_keys";
         };
 
         win_mgmt {
@@ -173,6 +175,8 @@
 &none  &none  &kp LEFT_SHIFT  &none  &none  &none                &none      &none                 &none      &none      &none      &none      &none  &none
 &none  &none  &none           &none  &none         &none  &none  &none      &none  &none  &none              &none      &none      &none      &none  &none
             >;
+
+            label = "win_mgmt";
         };
 
         workspace_mgmt {
@@ -183,6 +187,8 @@
 &none  &none  &kp LA(DE_N7)  &kp LA(DE_N8)  &kp LA(DE_N9)  &none                &none      &none                 &none  &none  &none  &kp RIGHT_SHIFT  &none  &none
 &none  &none  &none          &none          &none                 &none  &none  &none      &none  &none  &none          &none  &none  &none            &none  &none
             >;
+
+            label = "workspace_mgmt";
         };
 
         mod {
@@ -194,6 +200,8 @@
 &none           &none       &none         &none        &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
 &none           &none       &none         &none        &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
+
+            label = "mod";
         };
     };
 
