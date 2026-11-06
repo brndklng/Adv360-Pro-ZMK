@@ -116,7 +116,7 @@
             label = "pc_coding_symbols_left";
         };
 
-        coding_symbols_right {
+        pc_coding_symbols_right {
             display-name = "base layer for mac";
             bindings = <
 &none  &none  &none  &none  &none  &none  &none                                  &trans  &none                                    &none                                                       &none                                           &none                                               &none                                           &none
@@ -125,6 +125,8 @@
 &none  &none  &none  &none  &none  &none                &none      &none                 &none                                    &none                                                       &none                                           &none                                               &none                                           &none
 &none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none                                            &none                                                       &none                                           &none                                               &none                                           &none
             >;
+
+            label = "pc_coding_symbols_right";
         };
 
         keypad {
