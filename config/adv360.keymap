@@ -167,11 +167,11 @@
 
         workspace_mgmt {
             bindings = <
-&none  &none  &none              &none              &none              &none  &none                                  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &kp LA(LS(DE_N1))  &kp LS(LA(DE_N2))  &kp LS(LA(DE_N3))  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &kp LS(LA(DE_N4))  &kp LS(LA(DE_N5))  &kp LA(LS(DE_N6))  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &kp LS(LA(DE_N7))  &kp LS(LA(DE_N8))  &kp LS(LA(DE_N9))  &none                &none      &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none              &none              &none                     &none  &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
+&none  &none  &none          &none          &none          &none  &none                                  &none  &none  &none  &none  &none            &none  &none
+&none  &none  &kp LA(DE_N1)  &kp LA(DE_N2)  &kp LA(DE_N3)  &none  &none                                  &none  &none  &none  &none  &none            &none  &none
+&none  &none  &kp LA(DE_N4)  &kp LA(DE_N5)  &kp LA(DE_N6)  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none            &none  &none
+&none  &none  &kp LA(DE_N7)  &kp LA(DE_N8)  &kp LA(DE_N9)  &none                &none      &none                &none  &none  &none  &kp RIGHT_SHIFT  &none  &none
+&none  &none  &none          &none          &none                 &none  &none  &none      &none  &none  &none         &none  &none  &none            &none  &none
             >;
         };
 
