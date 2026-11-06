@@ -99,6 +99,8 @@
 &kp LEFT_SHIFT  &kp Z                      &kp X                      &kp C     &kp V            &kp B                           &kp HOME      &kp PG_UP                            &kp N  &kp M     &kp COMMA  &kp DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
 &none           &none                      &none                      &kp LEFT  &kp RIGHT               &kp SPACE  &kp LCTRL     &kp END       &kp PG_DN  &kp BACKSPACE  &kp ENTER         &kp DOWN  &kp UP     &none    &none            &none
             >;
+
+            label = "default";
         };
 
         coding_symbols_left {
