@@ -244,9 +244,14 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        cond_adjust_symbols_right {
+        cond_adjust_symbols_left {
             if-layers = <8 1>;
             then-layer = <9>;
+        };
+
+        cond_adjust_symbols_right {
+            if-layers = <8 2>;
+            then-layer = <10>;
         };
     };
 };
