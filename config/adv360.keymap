@@ -75,6 +75,11 @@
             bindings = <&mo 5>;
             key-positions = <50 49>;
         };
+
+        toggle_workspace_mgmt {
+            bindings = <&mo 6>;
+            key-positions = <55 56>;
+        };
     };
 
     keymap {
@@ -83,7 +88,7 @@
         default {
             display-name = "Base";
             bindings = <
-&none           &none                      &none                      &none     &none            &none  &none                                                            &mo 6      &none  &none     &none      &none    &none            &none
+&none           &none                      &none                      &none     &none            &none  &none                                                            &mo 7      &none  &none     &none      &none    &none            &none
 &kp TAB         &kp Q                      &kp W                      &kp E     &kp R            &kp T  &none                                                            &none      &kp Y  &kp U     &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
 &kp ESC         &hold_alternative DE_N0 A  &hold_alternative DE_SZ S  &kp D     &hm DE_DOLLAR F  &kp G  &none      &kp LEFT_ALT  &kp LGUI      &kp RGUI   &kp RIGHT_ALT  &none      &kp H  &kp J     &kp K      &kp L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
 &kp LEFT_SHIFT  &kp Z                      &kp X                      &kp C     &kp V            &kp B                           &kp HOME      &kp PG_UP                            &kp N  &kp M     &kp COMMA  &kp DOT  &kp DE_MINUS     &kp RIGHT_SHIFT
@@ -95,7 +100,7 @@
             display-name = "shifted";
             bindings = <
 &none                              &none                                &none                                             &none             &none             &none             &none                                  &none  &none  &none  &none  &none  &none  &none
-&hold_alternative DE_DEG DE_CARET  &hold_alternative (QUESTION) LS(N1)  &hold_alternative (DE_SINGLE_QUOTE) LS(NUMBER_2)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &none                                  &none  &none  &none  &none  &none  &none  &none
+&hold_alternative DE_DEG DE_CARET  &hold_alternative (DE_QMARK) LS(N1)  &hold_alternative (DE_SINGLE_QUOTE) LS(NUMBER_2)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &none                                  &none  &none  &none  &none  &none  &none  &none
 &none                              &none                                &none                                             &none             &none             &none             &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none                              &none                                &none                                             &none             &none             &none                           &none      &none                &none  &none  &none  &none  &none  &none
 &none                              &none                                &none                                             &none             &none                               &none  &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
@@ -107,7 +112,7 @@
             bindings = <
 &none  &none  &none  &none  &none  &none  &none                                  &none  &none                                          &none                                          &none                                          &none                                          &none                                           &none
 &none  &none  &none  &none  &none  &none  &none                                  &none  &hold_alternative (DE_BACKSLASH) LS(NUMBER_7)  &hold_alternative (LS(NUMBER_9)) LS(NUMBER_8)  &hold_alternative (RA(NUMBER_0)) RA(NUMBER_7)  &hold_alternative (RA(NUMBER_9)) RA(NUMBER_8)  &hold_alternative DE_GREATER_THAN DE_LESS_THAN  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none  &hold_alternative MINUS PLUS                   &hold_alternative POUND EQUAL                  &hold_alternative PIPE ASTRK                   &hold_alternative DE_GRAVE DE_TILDE            &none                                           &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none  &hold_alternative DE_MINUS DE_PLUS             &hold_alternative DE_POUND DE_EQUAL            &hold_alternative DE_PIPE DE_ASTERISK          &hold_alternative DE_GRAVE DE_TILDE            &none                                           &none
 &none  &none  &none  &none  &none  &none                &none      &none                &none                                          &none                                          &none                                          &none                                          &none                                           &none
 &none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none                                                 &none                                          &none                                          &none                                          &none                                           &none
             >;
@@ -116,11 +121,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&none  &none  &none  &none  &none  &none  &none                                  &none  &none            &none      &none      &none      &none       &none
-&none  &none  &none  &none  &none  &none  &none                                  &none  &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none       &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none  &none            &kp KP_N4  &kp KP_N5  &kp KP_N6  &none       &none
-&none  &none  &none  &none  &none  &none                &none      &none                &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp DE_DOT  &none
-&none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none                   &none      &none      &none      &none       &none
+&none  &none  &none  &none  &none  &none  &none                                    &none   &none            &none      &none      &none      &none       &none
+&none  &none  &none  &none  &none  &none  &none                                    &none   &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none       &none
+&none  &none  &none  &none  &none  &none  &none   &none  &none      &none  &none   &none   &none            &kp KP_N4  &kp KP_N5  &kp KP_N6  &none       &none
+&none  &none  &none  &none  &none  &none                 &none      &none                  &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp DE_DOT  &none
+&none  &none  &none  &none  &none         &trans  &none  &none      &none  &trans  &trans                   &none      &none      &none      &none       &none
             >;
         };
 
@@ -142,6 +147,16 @@
 &none  &none  &none           &none  &none  &none  &none  &none  &none      &none  &none  &none  &kp LA(H)  &kp LA(J)  &kp LA(K)  &kp LA(L)  &none  &none
 &none  &none  &kp LEFT_SHIFT  &none  &none  &none                &none      &none                &none      &none      &none      &none      &none  &none
 &none  &none  &none           &none  &none         &none  &none  &none      &none  &none  &none             &none      &none      &none      &none  &none
+            >;
+        };
+
+        workspace_mgmt {
+            bindings = <
+&none  &none  &none              &none              &none              &none  &none                                  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &kp LA(LS(DE_N1))  &kp LS(LA(DE_N2))  &kp LS(LA(DE_N3))  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &kp LS(LA(DE_N4))  &kp LS(LA(DE_N5))  &kp LA(LS(DE_N6))  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &kp LS(LA(DE_N7))  &kp LS(LA(DE_N8))  &kp LS(LA(DE_N9))  &none                &none      &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none              &none              &none                     &none  &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
