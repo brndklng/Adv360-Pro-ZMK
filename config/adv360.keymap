@@ -36,7 +36,7 @@
         choose_mac: choose_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 2>;
+            bindings = <&bt BT_SEL 2 &tog 0>;
             label = "CHOOSE_MAC";
         };
 
@@ -115,11 +115,11 @@
         coding_symbols_right {
             display-name = "base layer for mac";
             bindings = <
-&none  &none  &none  &none  &none  &none  &none                                  &trans  &none                                          &none                                          &none                                          &none                                          &none                                           &none
-&none  &none  &none  &none  &none  &none  &none                                  &none   &hold_alternative (DE_BACKSLASH) LS(NUMBER_7)  &hold_alternative (LS(NUMBER_9)) LS(NUMBER_8)  &hold_alternative (RA(NUMBER_0)) RA(NUMBER_7)  &hold_alternative (RA(NUMBER_9)) RA(NUMBER_8)  &hold_alternative DE_GREATER_THAN DE_LESS_THAN  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none   &hold_alternative DE_MINUS DE_PLUS             &hold_alternative DE_POUND DE_EQUAL            &hold_alternative DE_PIPE DE_ASTERISK          &hold_alternative DE_GRAVE DE_TILDE            &none                                           &none
-&none  &none  &none  &none  &none  &none                &none      &none                 &none                                          &none                                          &none                                          &none                                          &none                                           &none
-&none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none                                                  &none                                          &none                                          &none                                          &none                                           &none
+&none  &none  &none  &none  &none  &none  &none                                  &trans  &none                                    &none                                                       &none                                           &none                                               &none                                           &none
+&none  &none  &none  &none  &none  &none  &none                                  &none   &hold_alternative DE_BACKSLASH DE_SLASH  &hold_alternative DE_RIGHT_PARENTHESIS DE_LEFT_PARENTHESIS  &hold_alternative DE_RIGHT_BRACE DE_LEFT_BRACE  &hold_alternative DE_RIGHT_BRACKET DE_LEFT_BRACKET  &hold_alternative DE_GREATER_THAN DE_LESS_THAN  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none   &hold_alternative DE_MINUS DE_PLUS       &hold_alternative DE_POUND DE_EQUAL                         &hold_alternative DE_PIPE DE_ASTERISK           &hold_alternative DE_GRAVE DE_TILDE                 &none                                           &none
+&none  &none  &none  &none  &none  &none                &none      &none                 &none                                    &none                                                       &none                                           &none                                               &none                                           &none
+&none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none                                            &none                                                       &none                                           &none                                               &none                                           &none
             >;
         };
 
