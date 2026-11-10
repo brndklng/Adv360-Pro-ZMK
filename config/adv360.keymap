@@ -69,12 +69,12 @@
         };
 
         toggle_keypad {
-            bindings = <&mo 0>;
+            bindings = <&mo 9>;
             key-positions = <29 30>;
         };
 
         toggle_fn {
-            bindings = <&mo 11>;
+            bindings = <&mo 10>;
             key-positions = <47 48>;
         };
 
