@@ -79,17 +79,17 @@
         };
 
         toggle_win_mgmt {
-            bindings = <&mo 9>;
+            bindings = <&mo 6>;
             key-positions = <50 49>;
         };
 
         toggle_workspace_mgmt {
-            bindings = <&mo 8>;
+            bindings = <&mo 7>;
             key-positions = <55 56>;
         };
 
         toggle_arrow_keys {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <18 17>;
         };
     };
